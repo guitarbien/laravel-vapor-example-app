@@ -4,9 +4,8 @@ environments:
     production:
         memory: 128
         cli-memory: 128
-        concurrency: 5
+        concurrency: 10
         timeout: 20
-        octane: true
         runtime: 'php-8.1:al2'
         build:
             - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
