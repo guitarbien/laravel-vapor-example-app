@@ -15,7 +15,14 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('test:me')
+                 ->hourly()
+                 ->onSuccess(function () {
+                     \Log::info('scheduled success');
+                 })
+                 ->onFailure(function () {
+                     \Log::info('scheduled failure');
+                 });
     }
 
     /**

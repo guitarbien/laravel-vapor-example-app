@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/log', function () {
+    dispatch(function () {
+        \Log::info('job done');
+    });
+
+    \Log::info('job dispatched');
+
+    return 'ok';
+});
