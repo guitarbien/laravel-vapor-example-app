@@ -4,7 +4,6 @@ environments:
     production:
         memory: 128
         cli-memory: 128
-        concurrency: 10
         timeout: 20
         runtime: 'php-8.1:al2'
         build:
