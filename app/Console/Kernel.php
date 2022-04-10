@@ -16,7 +16,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('test:me')
-                 ->hourly()
+                 ->daily()
                  ->onSuccess(function () {
                      \Log::info('scheduled success');
                  })
